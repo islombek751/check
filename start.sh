@@ -5,5 +5,5 @@ export $(cat .env | xargs)
 exec gunicorn src.main:app \
     --workers 4 \
     --worker-class uvicorn.workers.UvicornWorker \
-    --bind 0.0.0.0:8000 \
+    --bind 127.0.0.1:8000 \
     --timeout 120
