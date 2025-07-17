@@ -1,6 +1,5 @@
 #!/bin/bash
 source venv/bin/activate
-export $(cat .env | xargs)
 
 exec gunicorn src.main:app \
     --workers 2 \
